@@ -29,11 +29,19 @@ bash -c "$(curl -sL https://get.containerlab.dev)"
 ```
 ## Создание базовой топологии и сети управления
 
-Был создан файл `lab1.clab.yaml`, в котором была создана базовая топология и задана сеть управления.
+Был создан файл `lab1.clab.yaml`, в котором была создана базовая топология и задана сеть управления:
 
-Далее был выполнен деплой через команду `clab deploy -t lab1.clab.yaml`
+![Топология 1](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/topology1.png)
 
-Затем был построен граф топологии командой `clab graph -t lab1.clab.yaml`
+![Топология 2](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/topology2.png)
+
+Далее был выполнен деплой через команду `clab deploy -t lab1.clab.yaml`:
+
+![Таблица](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/table.jpg)
+
+Затем был построен граф топологии командой `clab graph -t lab1.clab.yaml`:
+
+![Граф](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/graph.jpg)
 
 ## Настройка VLAN, DHCP, написание конфигов
 
@@ -145,10 +153,16 @@ ip route add 10.20.0.0/24 via 10.10.0.1 dev vlan10
 
 ## Проверка работоспособности системы
 
-Зайдём внутрь роутера через команду `ssh username@clab-lab1-R01.TEST`
+Зайдём внутрь роутера через команду `ssh username@clab-lab1-R01.TEST`  
 Проверим пинг с роутера:
 
+![Пинг 1](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/ping1.png)
+
+![Пинг 2](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/ping2.png)
+
 Проверим доступность компьютеров между собой:
+
+![Пинг ПК](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/ping pc.png)
 
 ## Заключение
 В ходе работы были создана трёхуровневая сеть для классического предприятия. Все устройства успешно соединены, были настроены два VLAN'а и DHCP серверы внутри них для раздачи ip компьютерам.
