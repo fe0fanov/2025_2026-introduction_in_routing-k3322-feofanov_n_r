@@ -1,0 +1,51 @@
+name: lab1
+
+mgmt:
+  network: custom_mgmt
+  ipv4-subnet: 172.31.0.0/24
+
+topology:
+  kinds:
+    vr-ros:
+      image: vrnetlab/mikrotik_routeros:6.47.9
+ 
+  nodes:
+    R01.TEST:
+      kind: vr-ros
+      mgmt-ipv4: 172.31.0.10
+      startup-config: config/r01.rsc
+    SW01.L3.01.TEST:
+      kind: vr-ros
+      mgmt-ipv4: 172.31.0.11
+      startup-config: config/sw01.rsc
+    SW02.L3.01.TEST:
+      kind: vr-ros
+      mgmt-ipv4: 172.31.0.12
+      startup-config: config/sw02-01.rsc
+    SW02.L3.02.TEST:
+      kind: vr-ros
+      mgmt-ipv4: 172.31.0.13
+      startup-config: config/sw02-02.rsc
+    PC1:
+      kind: linux
+      image: ubuntu:latest
+      mgmt-ipv4: 172.31.0.2
+      binds:
+        - ./config:/config
+      exec:
+        - sh /config/pc1.sh
+    PC2:
+      kind: linux
+      image: ubuntu:latest
+      mgmt-ipv4: 172.31.0.3
+      binds:
+        - ./config:/config
+      exec:
+        - sh /config/pc2.sh
+
+  links:
+    - endpoints: ["R01.TEST:eth1", "SW01.L3.01.TEST:eth1"]
+    - endpoints: ["SW01.L3.01.TEST:eth2", "SW02.L3.01.TEST:eth1"]
+    - endpoints: ["SW01.L3.01.TEST:eth3", "SW02.L3.02.TEST:eth1"]
+    - endpoints: ["SW02.L3.01.TEST:eth2", "PC1:eth1"]
+    - endpoints: ["SW02.L3.02.TEST:eth2", "PC2:eth1"]

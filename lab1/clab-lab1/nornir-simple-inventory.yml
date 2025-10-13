@@ -1,0 +1,31 @@
+---
+PC1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.31.0.2
+PC2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.31.0.3
+R01.TEST:
+    username: admin
+    password: admin
+    platform: vr-ros
+    hostname: 172.31.0.10
+SW01.L3.01.TEST:
+    username: admin
+    password: admin
+    platform: vr-ros
+    hostname: 172.31.0.11
+SW02.L3.01.TEST:
+    username: admin
+    password: admin
+    platform: vr-ros
+    hostname: 172.31.0.12
+SW02.L3.02.TEST:
+    username: admin
+    password: admin
+    platform: vr-ros
+    hostname: 172.31.0.13
