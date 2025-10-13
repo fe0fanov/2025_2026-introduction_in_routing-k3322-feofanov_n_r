@@ -1,20 +1,20 @@
 # Лабораторная работа №1 "Установка ContainerLab и развертывание тестовой сети связи"
 
-University: ITMO University
-Faculty: FICT
-Course: Introduction in routing
-Year: 2025/2026
-Group: K3322
-Author: Feofanov Nikita Romanovich
-Lab: Lab1
-Date of create: 8.10.2025
+University: ITMO University  
+Faculty: FICT  
+Course: Introduction in routing  
+Year: 2025/2026  
+Group: K3322  
+Author: Feofanov Nikita Romanovich  
+Lab: Lab1  
+Date of create: 8.10.2025  
 Date of finished: 13.10.2025
 
 ## Схема сети
 
-На рисунке ниже представлена схема сети, нарисованная в draw.io
+На рисунке ниже представлена схема сети, нарисованная в draw.io:
 
-рисунок
+![Схема](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/raw/main/lab1/images/diagram.png)
 
 ## Установка ContainerLab
 
@@ -31,17 +31,16 @@ bash -c "$(curl -sL https://get.containerlab.dev)"
 
 Был создан файл `lab1.clab.yaml`, в котором была создана базовая топология и задана сеть управления:
 
-![Топология 1](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/topology1.png)
-
-![Топология 2](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/topology2.png)
+![Топология 1](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/raw/main/lab1/images/topology1.png)
+![Топология 2](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/raw/main/lab1/images/topology2.png)
 
 Далее был выполнен деплой через команду `clab deploy -t lab1.clab.yaml`:
 
-![Таблица](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/table.jpg)
+![Таблица](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/raw/main/lab1/images/table.jpg)
 
 Затем был построен граф топологии командой `clab graph -t lab1.clab.yaml`:
 
-![Граф](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/graph.jpg)
+![Граф](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/raw/main/lab1/images/graph.jpg)
 
 ## Настройка VLAN, DHCP, написание конфигов
 
@@ -156,13 +155,16 @@ ip route add 10.20.0.0/24 via 10.10.0.1 dev vlan10
 Зайдём внутрь роутера через команду `ssh username@clab-lab1-R01.TEST`  
 Проверим пинг с роутера:
 
-![Пинг 1](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/ping1.png)
-
-![Пинг 2](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/ping2.png)
+![Пинг 1](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/raw/main/lab1/images/ping1.png)
+![Пинг 2](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/raw/main/lab1/images/ping2.png)
 
 Проверим доступность компьютеров между собой:
 
-![Пинг ПК](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/tree/main/lab1/images/ping pc.png)
+![Пинг ПК](https://github.com/fe0fanov/2025_2026-introduction_in_routing-k3322-feofanov_n_r/raw/main/lab1/images/ping_pc.png)
+
+## Сложности
+
+Изначально была попытка выполнить работу внутри WSL на Windows, однако виртуализация внутри WSL, необходимая для ContainerLab, к сожалению, невозможна. Поэтому в итоге работа была выполнена на Ubuntu внутри виртуальной машины.
 
 ## Заключение
 В ходе работы были создана трёхуровневая сеть для классического предприятия. Все устройства успешно соединены, были настроены два VLAN'а и DHCP серверы внутри них для раздачи ip компьютерам.
