@@ -4,9 +4,9 @@ Course: [Introduction in routing](https://github.com/itmo-ict-faculty/introducti
 Year: 2025/2026<br />
 Group: K3322<br />
 Author: Feofanov Nikita<br />
-Lab: Lab3<br />
-Date of create: 25.11.2025<br />
-Date of finished: 25.11.2025<br />
+Lab: Lab4<br />
+Date of create: 31.11.2025<br />
+Date of finished: 1.12.2025<br />
 
 # Задание
 
@@ -36,16 +36,13 @@ Date of finished: 25.11.2025<br />
 
 Схема draw.io:
 
-<img src="images/clab_graph.png" width=600px>
-
-Схема ContainerLab:
-
-
-
+<img src="images/graph.png">
 
 # yaml-конфиг
 
 Конфигурация сети аналогична предыдущей лабораторной работе: 6 роутеров и 3 компьютера. Сеть управления: 172.16.16.0/24.
+
+<img src="images/table.png">
 
 # Конфиги устройств
 
@@ -102,59 +99,57 @@ Autonomous System — это система сетей под управлени
 
 Проверка динамическую маршрутизации:
 
-<img src="images/ospf-1.png" width=600px>
-<img src="images/ospf-2.png" width=600px>
-<img src="images/ospf-3.png" width=600px>
-<img src="images/ospf-4.png" width=600px>
-<img src="images/ospf-5.png" width=600px>
-<img src="images/ospf-6.png" width=600px>
+<img src="images/dinamic1.png">
+<img src="images/dinamic2.png">
+<img src="images/dinamic3.png">
+<img src="images/dinamic4.png">
+<img src="images/dinamic5.png">
+<img src="images/dinamic6.png">
 
 
 ## 2: MPLS
 
-<img src="images/mpls-1.png" width=600px>
-<img src="images/mpls-2.png" width=600px>
-<img src="images/mpls-3.png" width=600px>
-<img src="images/mpls-4.png" width=600px>
-<img src="images/mpls-5.png" width=600px>
-<img src="images/mpls-6.png" width=600px>
+<img src="images/mpls1.png">
+<img src="images/mpls2.png">
+<img src="images/mpls3.png">
+<img src="images/mpls4.png">
+<img src="images/mpls5.png">
+<img src="images/mpls6.png">
 
 ## 3: iBGP
 
 Можно заметить флаг E - established. Значит все конфиги настроены без ошибок.
 
-<img src="images/ibgp-1.png" width=600px>
-<img src="images/ibgp-2.png" width=600px>
-<img src="images/ibgp-3.png" width=600px>
-<img src="images/ibgp-4.png" width=600px>
-<img src="images/ibgp-5.png" width=600px>
-<img src="images/ibgp-6.png" width=600px>
+<img src="images/bgp1.png">
+<img src="images/bgp2.png">
+<img src="images/bgp3.png">
+<img src="images/bgp4.png">
+<img src="images/bgp5.png">
+<img src="images/bgp6.png">
 
 ## 4: VRF
 
 Маршруты на внешних роутерах:
 
-<img src="images/vrf1.png" width=600px>
-<img src="images/vrf2.png" width=600px>
-<img src="images/vrf3.png" width=600px>
+<img src="images/vrf1.png">
+<img src="images/vrf2.png">
+<img src="images/vrf3.png">
 
 Пинги между роутерами:
 
-<img src="images/vrf-ping1.png" width=600px>
-<img src="images/vrf-ping2.png" width=600px>
-<img src="images/vrf-ping3.png" width=600px>
+<img src="images/vrf_ping1.png">
+<img src="images/vrf_ping2.png">
 
 ## 2-я часть: VPLS
 
 Раздача IP-адресов через DHCP сервер на роутере СПБ:
 
-<img src="images/vpls-dhcp.png" width=600px>
+<img src="images/vpls_spb.png">
 
 Пинги между компьютерами:
 
-<img src="images/vpls-ping1.png" width=600px>
-<img src="images/vpls-ping2.png" width=600px>
-<img src="images/vpls-ping3.png" width=600px>
+<img src="images/vpls_ping1.png">
+<img src="images/vpls_ping2.png">
 
 # Заключение
 
