@@ -22,17 +22,19 @@ Date of finished: 25.11.2025<br />
 
 Схема в draw.io:
 
-
+<img src="images/graph.png">
 
 Схема ContainerLab:
 
-
+<img src="images/graph_clab.png">
 
 # yaml-конфиг
 
 В конфигурации сети 6 роутеров, компьютер, а также SGI-PRISM использует образ компьютера.
 
 Сеть управления: 172.16.16.0/24.
+
+<img src="images/table.png">
 
 # Конфиги устройств
 
@@ -64,24 +66,36 @@ Date of finished: 25.11.2025<br />
 
 Проверка динамической маршрутизации:
 
-
+<img src="images/ospf1.png">
+<img src="images/ospf2.png">
+<img src="images/ospf3.png">
+<img src="images/ospf4.png">
+<img src="images/ospf5.png">
+<img src="images/ospf6.png">
 
 Видно, что всё настроено динамически.
 
 ## 2: MPLS
 
-
+<img src="images/mpls1.png">
+<img src="images/mpls2.png">
+<img src="images/mpls3.png">
+<img src="images/mpls4.png">
+<img src="images/mpls5.png">
+<img src="images/mpls6.png">
 
 С фильтрацией:
 
-
+<img src="images/mpls_filtered.png">
 
 ## 3: VPLS
 
+<img src="images/vpls1.png">
+<img src="images/vpls2.png">
 
 ## Соединение компьютеров
 
-
+<img src="images/ping_pc.png">
 
 # Заключение
 
