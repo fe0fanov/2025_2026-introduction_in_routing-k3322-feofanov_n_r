@@ -1,0 +1,31 @@
+---
+PC1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 10.20.30.2
+PC2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 10.20.30.3
+PC3:
+    username: 
+    password: 
+    platform: linux
+    hostname: 10.20.30.4
+R01.BRL:
+    username: admin
+    password: admin
+    platform: vr-ros
+    hostname: 10.20.30.103
+R01.FRT:
+    username: admin
+    password: admin
+    platform: vr-ros
+    hostname: 10.20.30.102
+R01.MSK:
+    username: admin
+    password: admin
+    platform: vr-ros
+    hostname: 10.20.30.101
