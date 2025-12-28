@@ -36,7 +36,7 @@ Date of finished: 1.12.2025<br />
 
 Схема draw.io:
 
-<img src="images/graph.png">
+<img src="images/graph1.png">
 
 # yaml-конфиг
 
